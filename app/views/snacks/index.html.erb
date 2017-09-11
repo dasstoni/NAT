@@ -1,1 +1,23 @@
 <h1> Welcome to SnaFoo! </h1>
+
+<!-- I am attempting to get these loops to display each snack item included in the API but nothing appears -->
+
+<% @permanent_snacks.each do |snack| %>
+  <%= snack.name %>
+<% end %>
+
+<% @optional_snacks.each do |snack| %>
+  <%= snack.name %>
+<% end %>
+
+<%= @snacks %>
+<%= @optional_snacks %>
+<%= @permanent_snacks %>
+
+<br  />
+
+Snack with name paramater (to test):
+
+<%= @snacks.name %>
+
+<!-- So it recognizes the fields and datatypes -->

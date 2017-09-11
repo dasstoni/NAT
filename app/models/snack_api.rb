@@ -1,6 +1,6 @@
 class SnackAPI
   include HTTParty
-  base_uri 'https://api-snacks.nerderylabs.com/v1/'
+  base uri 'https://api-snacks.nerderylabs.com/v1/'
   SNACK_ACCESS = "/snacks?ApiKey=#{ENV['SNACK_API_KEY']}"
 
   def get_snacks
