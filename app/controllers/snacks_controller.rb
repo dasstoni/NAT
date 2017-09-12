@@ -1,6 +1,6 @@
 class SnacksController < ApplicationController
   def index
-    @snacks = Snack.all
+    @snacks = Snack.new
     @permanent_snacks = Snack.where(optional: false)
     @optional_snacks = Snack.where(optional: true)
   end
