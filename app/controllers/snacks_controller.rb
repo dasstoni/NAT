@@ -1,8 +1,16 @@
 class SnacksController < ApplicationController
   def index
-    @snacks = Snack.new
-    @permanent_snacks = Snack.where(optional: false)
-    @optional_snacks = Snack.where(optional: true)
+    # response = SnackAPI.get_snacks
+    #
+    # if response.success?
+    #   @snacks = response[:snacks]
+    # else
+    #   flash.now[:error] = "Could not fetch snacks"
+    #   @snacks = []
+    # end
+    # @snacks = Snack.new.perform
+    # @permanent_snacks = Snack.where(optional: false)
+    # @optional_snacks = Snack.where(optional: true)
   end
 
   # def new

@@ -1,11 +1,15 @@
-<h1> Welcome to SnaFoo! </h1>
+<h1 class='text-center'> Welcome to SnaFoo! </h1>
 
-<!-- I am attempting to get these loops to display each snack item included in the API but nothing appears -->
 
-<% @permanent_snacks.each do |snack| %>
-  <%= snack.name %>
-<% end %>
 
-<% @optional_snacks.each do |snack| %>
-  <%= snack.name %>
-<% end %>
+
+<h3 class='text-center'> Vote for some suggested snacks! </h3>
+<br  />
+<br  />
+
+<h5 class='text-center'> Don't see anything you like? </h5>
+<br  />
+
+<div class='text-center'>
+  <%= link_to "Make a suggestion", new_snack_path, :class => 'btn btn-primary' %>
+</div>
