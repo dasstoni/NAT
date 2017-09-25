@@ -8,6 +8,9 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.3.3'
 end
 
+#Debugging
+gem 'pry-rails', :group => :development
+
 # HTTParty for API call
 gem 'httparty'
 # Figaro to store API Key
