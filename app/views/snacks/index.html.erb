@@ -6,17 +6,17 @@
 
 <h5 class='text-center'> Permanent Snacks: </h5>
 
-<!-- @permanent_snacks.each do |snack|
-  snack.name
-end -->
+<% @permanent_snacks.each do |snack| %>
+  <%= snack["name"] %>
+<% end %>
 
 <br  />
 
 <h5 class='text-center'> Suggested Snacks: </h5>
 
-<!-- @optional_snacks.each do |snack|
-  snack.name
-end -->
+<% @optional_snacks.each do |snack| %>
+  <%= snack["name"] %>
+<% end %>
 
 <br  />
 <br  />
