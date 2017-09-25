@@ -19,6 +19,7 @@ class SnackAPI
     end
   end
 
+
   # def post_snacks(snacks)
   # snacks.each do |snack|
   #   options = {

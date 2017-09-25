@@ -6,9 +6,17 @@
 
 <h5 class='text-center'> Permanent Snacks: </h5>
 
-<% @permanent_snacks.each do |snack| %>
-  <%= snack["name"] %>
-<% end %>
+<br class='clear'/>
+
+<div class='col-3 perm'>
+  <ul class='list-group'>
+    <% @permanent_snacks.each do |snack| %>
+      <li class='list-group-item'>
+        <%= snack["name"] %>
+      </li>
+    <% end %>
+  </ul>
+</div>
 
 <br  />
 
@@ -28,3 +36,6 @@
 <div class='text-center'>
   <%= link_to "Make a suggestion", new_snack_path, :class => 'btn btn-lg btn-secondary' %>
 </div>
+
+<br  />
+<br  />

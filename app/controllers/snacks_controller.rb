@@ -7,6 +7,9 @@ class SnacksController < ApplicationController
   end
 
   def new
+    snack_api = SnackAPI.new
+    snack_api.get_snacks
+    @optional_snacks = snack_api.where(optional: true)
   end
 
   def create
