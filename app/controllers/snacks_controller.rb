@@ -4,6 +4,8 @@ class SnacksController < ApplicationController
     snack_api.get_snacks
     @permanent_snacks = snack_api.where(optional: false)
     @optional_snacks = snack_api.where(optional: true)
+    #initiate session reset
+    reset
   end
 
   def new
@@ -44,10 +46,11 @@ class SnacksController < ApplicationController
   end
 
   def reset
+    session[:expires_at] = 1.month.from_now
     # Reset vote count after a month to allow for users to vote the next month
-    session['total_votes'] = { value: true, expires: 1.month.from.now}
-    # Reset suggestions after a month to allow users to make new suggestions
-    session['num_of_suggestions'] = { value: true, expires: 1.month.from.now}
+    # session['total_votes'] = { value: 3, expires: 1.month.from_now}
+    # # Reset suggestions after a month to allow users to make new suggestions
+    # session['num_of_suggestions'] = { value: 1, expires: 1.month.from_now}
   end
 
 
