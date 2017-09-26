@@ -13,17 +13,18 @@ class SnacksController < ApplicationController
   end
 
   def create
-    snack_api = SnackAPI.new
-    snack_api.post_snacks(params)
     num_of_suggestions = session['num_of_suggestions'] || 0
     # check if user has made a suggestion
     if num_of_suggestions >= 1
       flash[:notice] = "You have already made a suggestion for this month...Please wait until next month"
     else
+      snack_api = SnackAPI.new
+      snack_api.post_snacks(params)
       # Add user suggestion to session for the number of suggestions made
-      num_of_suggestions + 1
+      num_of_suggestions += 1
       flash[:notice] = "Your suggestion has been submitted"
     end
+    session['num_of_suggestions'] = num_of_suggestions
     redirect_to root_path
   end
   # Used sessions instead of cookies for security
