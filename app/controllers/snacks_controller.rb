@@ -23,13 +23,21 @@ class SnacksController < ApplicationController
     # checks user vote count
     if snack_votes >= 3
       # user has voted max amount of time
-      flash[:notice] = "You've voted max times"
+      flash[:notice] = "You've voted the maximum number of times"
     else
       snack_votes += 1
+      # lets user know his/her vote has been recorderd
       flash[:notice] = "Vote has been recorded"
     end
     session['total_votes'] = snack_votes
     redirect_to root_path
   end
+
+  def vote_reset
+    # Reset vote count after a month to allow for users to vote the next month
+    session['total_votes'] = { value: true, expires: 1.month.month.from.now}
+  end
+
+  # Used sessions instead of cookies for extra security
 
 end

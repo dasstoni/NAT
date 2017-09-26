@@ -24,7 +24,8 @@ class SnackAPI
     options = {
       body: {
         name: params['name'],
-        location: params['purchase_location']
+        location: params['purchase_location'],
+        optional: true
       }.to_json,
       headers: {
         'Content-Type' => 'application/json'

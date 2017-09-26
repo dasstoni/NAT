@@ -1,24 +1,20 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Nerdery Assessment Test
 
-Things you may want to cover:
+* Ruby version 2.3.1 ... Rails version 5.0.6
 
-* Ruby version
+* Voting and Suggestion snack service for employees of the Nerdery
 
-* System dependencies
+* Postgresql (Empty db..All data retrieved from API)
 
-* Configuration
+* Did not include Devise or user authentication since it can be assumed each user is using the same computer and Web Browser for votes and submissions
 
-* Database creation
+*
 
-* Database initialization
+*
 
-* How to run the test suite
+*
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Clone repository -> Navigate to directory of application -> Run rails s -b 0.0.0.0 in Terminal/Command Prompt -> Navigate to localhost:3030
+  * Production (Heroku) -> https://nat-david-stonikas.herokuapp.com/
