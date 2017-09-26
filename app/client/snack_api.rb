@@ -30,8 +30,6 @@ class SnackAPI
         'Content-Type' => 'application/json'
       }
     }
-    puts options
     response = self.class.post(SNACK_ACCESS, options)
-    puts response
   end
 end

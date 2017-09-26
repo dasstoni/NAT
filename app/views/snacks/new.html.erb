@@ -8,9 +8,13 @@
       Suggest from previous snacks
     </button>
     <div class="dropdown-menu">
+      <ul class='list-group'>
         <% @optional_snacks.each do |snack| %>
+          <li class='list-group-item'>
             <%= snack['name']%>
+          </li>
         <% end %>
+      </ul>
     </div>
   </div>
 

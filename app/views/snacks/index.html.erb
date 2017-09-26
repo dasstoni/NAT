@@ -21,12 +21,19 @@
 <br  />
 
 <h5 class='text-center'> Suggested Snacks: </h5>
-  votes_remaining = <%= 3 - (session['total_votes'] || 0) %>
 
-<% @optional_snacks.each do |snack| %>
-  <%= snack["name"] %>
-  <%= link_to "Vote", votes_snacks_path, class: 'btn btn-secondary' %>
-<% end %>
+<h7 class='votes-rem'> Votes_Remaining = <%= 3 - (session['total_votes'] || 0) %> </h7>
+
+<br class='clear' />
+<br  />
+
+<div class='text-center'>
+  <% @optional_snacks.each do |snack| %>
+    <%= snack["name"] %>
+    <%= link_to "Vote", votes_snacks_path, class: 'btn btn-secondary' %>
+    <br  />
+  <% end %>
+</div>
 
 <% flash.each do |key, value| %>
     <div class="alert alert-<%= key %>"><%= value %></div>

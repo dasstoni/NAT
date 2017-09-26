@@ -3,7 +3,7 @@ class SnacksController < ApplicationController
     snack_api = SnackAPI.new
     snack_api.get_snacks
     @permanent_snacks = snack_api.where(optional: false)
-    @optional_snacks = snack_api.where(optional: true) #going to be added a suggested field to the optional snacks.
+    @optional_snacks = snack_api.where(optional: true)
   end
 
   def new
@@ -20,7 +20,7 @@ class SnacksController < ApplicationController
 
   def vote
     snack_votes = session['total_votes'] || 0
-
+    # checks user vote count
     if snack_votes >= 3
       # user has voted max amount of time
       flash[:notice] = "You've voted max times"
@@ -31,14 +31,5 @@ class SnacksController < ApplicationController
     session['total_votes'] = snack_votes
     redirect_to root_path
   end
-
-  def update
-  end
-
-  # private
-  #
-  # def snack_params
-  #   params.require(:snack).permit(:name, :purchase_location)
-  # end
 
 end
