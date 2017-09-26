@@ -8,14 +8,14 @@
       Suggest from previous snacks
     </button>
     <div class="dropdown-menu">
-      <% @optional_snacks.each do |snack| %>
-        <%= snack['name'] %>
-      <% end %>
+        <% @optional_snacks.each do |snack| %>
+            <%= snack['name']%>
+        <% end %>
     </div>
   </div>
 
-  <br  />
-  <br  />
+<br  />
+<br  />
 
 <%= form_tag('/snacks', method: :post) do %>
     <div class="form-group">
