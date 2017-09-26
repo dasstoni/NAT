@@ -13,27 +13,25 @@ class SnackAPI
     @all_snacks = JSON.parse(response.body)
   end
 
-  def where(optional: true)
+  def where(optional: )
     @all_snacks.select do |snack|
       snack["optional"] == optional
     end
   end
 
 
-  # def post_snacks(snacks)
-  # snacks.each do |snack|
-  #   options = {
-  #     body: {
-  #       name: snack.name,
-  #       location: snack.purchase_location,
-  #       lastPurchaseDate: snack.last_purchased
-  #     }.to_json,
-  #     headers: {
-  #       'Content-Type' => 'application/json'
-  #     }
-  #   }
-  #   end
-  #   response = self.class.post(SNACK_ACCESS, options)
-  #
-  # end
+  def post_snacks(params)
+    options = {
+      body: {
+        name: params['name'],
+        location: params['purchase_location']
+      }.to_json,
+      headers: {
+        'Content-Type' => 'application/json'
+      }
+    }
+    puts options
+    response = self.class.post(SNACK_ACCESS, options)
+    puts response
+  end
 end
