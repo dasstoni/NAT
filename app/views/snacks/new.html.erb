@@ -31,3 +31,9 @@
       <button type="submit" class="btn btn-secondary">Submit</button>
   <% end %>
 </div>
+
+<div class='container text-center'>
+  <% flash.each do |key, value| %>
+      <div class="alert alert-<%= key %>"><%= value %></div>
+  <% end %>
+</div>

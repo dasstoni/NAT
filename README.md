@@ -10,7 +10,7 @@ Nerdery Assessment Test
 
 * Did not include Devise or user authentication since it can be assumed each user is using the same computer and Web Browser for votes and submissions
 
-*
+* Used Sessions instead of Cookies to keep track of user votes
 
 *
 
