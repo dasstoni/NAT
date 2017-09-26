@@ -12,9 +12,9 @@ Nerdery Assessment Test
 
 * Used Sessions instead of Cookies to keep track of user votes
 
-*
+* Used Bootstrap for simple styling
 
-*
+* Other gems used: rails_12 factor for production, figaro for storing my API Key, pry-rails for debugging
 
-* Clone repository -> Navigate to directory of application -> Run rails s -b 0.0.0.0 in Terminal/Command Prompt -> Navigate to localhost:3030
+* TO RUN: Clone repository -> Navigate to directory of application in terminal -> Run rails s -b 0.0.0.0 in Terminal/Command Prompt -> Navigate to localhost:3030
   * Production (Heroku) -> https://nat-david-stonikas.herokuapp.com/
