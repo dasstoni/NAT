@@ -46,11 +46,7 @@ class SnacksController < ApplicationController
   end
 
   def reset
-    session[:expires_at] = 1.month.from_now
-    # Reset vote count after a month to allow for users to vote the next month
-    # session['total_votes'] = { value: 3, expires: 1.month.from_now}
-    # # Reset suggestions after a month to allow users to make new suggestions
-    # session['num_of_suggestions'] = { value: 1, expires: 1.month.from_now}
+    request.session_options[:expires_at] = 1.month.from_now
   end
 
 

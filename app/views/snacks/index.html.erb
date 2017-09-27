@@ -6,6 +6,7 @@
 
 <br class='clear'/>
 
+<!-- Non-Optional Snacks -->
 <div class='col-3 perm'>
   <ul class='list-group'>
     <% @permanent_snacks.each do |snack| %>
@@ -27,12 +28,14 @@
 <br class='clear' />
 <br  />
 
+<!-- Displays error messages -->
 <div class='container text-center'>
   <% flash.each do |key, value| %>
       <div class="alert alert-<%= key %>"><%= value %></div>
   <% end %>
 </div>
 
+<!-- Suggested/Votable snacks -->
 <div class='text-center'>
   <% @optional_snacks.each do |snack| %>
     <%= snack["name"] %>
