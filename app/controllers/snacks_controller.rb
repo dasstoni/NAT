@@ -47,6 +47,7 @@ class SnacksController < ApplicationController
 
   def reset
     request.session_options[:expires_at] = 1.month.from_now
+    #session[:expires_at] = Time.now + 1.month
   end
 
 
